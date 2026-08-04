@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JourneyMate</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- Loader -->
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <i class="fa-solid fa-plane-departure"></i>
+
+        <h2>JourneyMate</h2>
+
+        <p>Loading your next adventure...</p>
+
+    </div>
+
+</div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>JourneyMate</h2>
+        </div>
+
+        <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+
+        <a href="#" class="btn" id="openModal">
+    Plan Trip
+</a>
+
+<div class="menu-icon" id="menu-icon">
+    <i class="fa-solid fa-bars"></i>
+</div>
+
+        <button id="theme-toggle">🌙</button>
+
+       
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Explore The World With JourneyMate</h1>
+
+           <p>
+            Plan your dream vacation, discover hidden gems,
+            and create unforgettable memories with JourneyMate.
+           </p>
+          
+            <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search your destination...">
+
+            <button id="searchBtn">
+                    Search
+            </button>
+           </div>
+
+            <div class="hero-buttons">
+                <a href="#" class="primary-btn">Get Started</a>
+                <a href="#" class="secondary-btn">Explore Places</a></div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations Section -->
+
+<section class="destinations" id="destinations">
+
+    <h2>Popular Destinations</h2>
+
+    <div class="destination-container">
+
+        <!-- Paris -->
+        <div class="card"
+            data-name="Paris"
+            data-country="France"
+            data-price="₹49,999"
+            data-duration="5 Days / 4 Nights"
+            data-image="images/paris.jpg"
+            data-includes="Flight,Hotel,Breakfast,City Tour">
+            <div class="card-badge">Best Seller</div>
+
+            <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
+            </div>
+            <img src="images/paris.jpg" alt="Paris">
+
+            <div class="card-content">
+                <h3>Paris</h3>
+                <p>France</p>
+                <span>⭐ 4.8</span>
+            </div>
+
+        </div>
+
+        <!-- Bali -->
+        <div class="card"
+            data-name="Bali"
+            data-country="Indonesia"
+            data-price="₹39,999"
+            data-duration="6 Days / 5 Nights"
+            data-image="images/bali.jpg"
+            data-includes="Resort,Breakfast,Beach Tour">
+            <div class="card-badge">Best Seller</div>
+
+<div class="wishlist">
+    <i class="fa-regular fa-heart"></i>
+</div>
+            <img src="images/bali.jpg" alt="Bali">
+
+            <div class="card-content">
+                <h3>Bali</h3>
+                <p>Indonesia</p>
+                <span>⭐ 4.9</span>
+            </div>
+
+        </div>
+
+        <!-- Switzerland -->
+        <div class="card"
+            data-name="Switzerland"
+            data-country="Europe"
+            data-price="₹79,999"
+            data-duration="7 Days / 6 Nights"
+            data-image="images/switzerland.jpg"
+            data-includes="Flight,Hotel,Sightseeing,Ski Pass">
+<div class="card-badge">Best Seller</div>
+
+<div class="wishlist">
+    <i class="fa-regular fa-heart"></i>
+</div>
+            <img src="images/switzerland.jpg" alt="Switzerland">
+
+            <div class="card-content">
+                <h3>Switzerland</h3>
+                <p>Europe</p>
+                <span>⭐ 4.9</span>
+            </div>
+
+        </div>
+
+        <!-- Thailand -->
+        <div class="card"
+            data-name="Thailand"
+            data-country="Asia"
+            data-price="₹39,999"
+            data-duration="6 Days / 5 Nights"
+            data-image="images/thailand.jpg"
+            data-includes="Flight,Hotel,Breakfast,City Tour">
+<div class="card-badge">Best Seller</div>
+
+<div class="wishlist">
+    <i class="fa-regular fa-heart"></i>
+</div>
+            <img src="images/thailand.jpg" alt="Thailand">
+
+            <div class="card-content">
+                <h3>Thailand</h3>
+                <p>Asia</p>
+                <span>⭐ 4.8</span>
+            </div>
+
+        </div>
+
+        <!-- Dubai -->
+        <div class="card"
+            data-name="Dubai"
+            data-country="Middle East"
+            data-price="₹59,999"
+            data-duration="5 Days / 4 Nights"
+            data-image="images/dubai.jpg"
+            data-includes="Hotel,Desert Safari,Breakfast">
+<div class="card-badge">Best Seller</div>
+
+<div class="wishlist">
+    <i class="fa-regular fa-heart"></i>
+</div>
+            <img src="images/dubai.jpg" alt="Dubai">
+
+            <div class="card-content">
+                <h3>Dubai</h3>
+                <p>Middle East</p>
+                <span>⭐ 4.9</span>
+            </div>
+
+        </div>
+
+        <!-- Tokyo -->
+        <div class="card"
+            data-name="Tokyo"
+            data-country="Japan"
+            data-price="₹89,999"
+            data-duration="8 Days / 7 Nights"
+            data-image="images/tokyo.jpg"
+            data-includes="Flight,Hotel,Sightseeing,Adventure Activities">
+<div class="card-badge">Best Seller</div>
+
+<div class="wishlist">
+    <i class="fa-regular fa-heart"></i>
+</div>
+            <img src="images/tokyo.jpg" alt="Tokyo">
+
+            <div class="card-content">
+                <h3>Tokyo</h3>
+                <p>Japan</p>
+                <span>⭐ 4.9</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Features Section -->
+<section class="features">
+
+    <h2>Why Choose JourneyMate?</h2>
+
+    <div class="feature-container">
+
+        <div class="feature-card" data-aos="fade-up">
+            <div class="icon">✈️</div>
+            <h3>Easy Booking</h3>
+            <p>Book your dream destination in just a few clicks.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up">
+            <div class="icon">💰</div>
+            <h3>Best Prices</h3>
+            <p>Find affordable packages without compromising quality.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up">
+            <div class="icon">🌍</div>
+            <h3>Worldwide Tours</h3>
+            <p>Explore amazing destinations across the globe.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up">
+            <div class="icon"><i class="fa-solid fa-headphones"></i></div>
+            <h3>24/7 Support</h3>
+            <p>Our dedicated team is always here to help you with any questions or concerns.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Counter Section -->
+
+<section class="counter-section">
+
+    <div class="counter-container">
+
+
+        <div class="counter-box">
+
+            <h2 class="counter" data-target="100">
+                0
+            </h2>
+
+            <p>Destinations</p>
+
+        </div>
+
+
+
+        <div class="counter-box">
+
+            <h2 class="counter" data-target="5000">
+                0
+            </h2>
+
+            <p>Happy Travelers</p>
+
+        </div>
+
+
+
+        <div class="counter-box">
+
+            <h2 class="counter" data-target="50">
+                0
+            </h2>
+
+            <p>Countries</p>
+
+        </div>
+
+
+
+        <div class="counter-box">
+
+            <h2 class="counter" data-target="99">
+                0
+            </h2>
+
+            <p>Success Rate %</p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- Packages Section -->
+<section class="packages" id="packages">
+
+    <h2>Popular Packages</h2>
+
+    <div class="package-container">
+
+        <div class="package-card">
+            <img src="images/bali.jpg" alt="Bali Package">
+
+            <div class="package-content">
+                <h3>Bali Escape</h3>
+                <p>5 Days • 4 Nights</p>
+
+                <div class="package-info">
+                    <span>⭐ 4.9</span>
+                    <span class="price">₹24,999</span>
+                </div>
+
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <img src="images/paris.jpg" alt="Paris Package">
+
+            <div class="package-content">
+                <h3>Paris Romance</h3>
+                <p>6 Days • 5 Nights</p>
+
+                <div class="package-info">
+                    <span>⭐ 4.8</span>
+                    <span class="price">₹59,999</span>
+                </div>
+
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <img src="images/switzerland.jpg" alt="Swiss Package">
+
+            <div class="package-content">
+                <h3>Swiss Adventure</h3>
+                <p>7 Days • 6 Nights</p>
+
+                <div class="package-info">
+                    <span>⭐ 5.0</span>
+                    <span class="price">₹79,999</span>
+                </div>
+
+                <a href="#" class="book-btn">Book Now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- About Section -->
+
+<section class="about" id="about">
+
+    <div class="about-container">
+
+
+        <div class="about-image" data-aos="fade-right">
+
+            <img src="images/world.jpg" alt="Travel">
+
+        </div>
+
+
+
+        <div class="about-content" data-aos="fade-left">
+
+            <h2>About JourneyMate</h2>
+
+
+            <p>
+                JourneyMate is your smart travel companion that helps you
+                discover beautiful destinations, plan amazing trips,
+                and create unforgettable memories.
+            </p>
+
+
+            <p>
+                From budget-friendly vacations to luxury experiences,
+                we make your journey simple, safe and exciting.
+            </p>
+
+
+
+            <div class="about-boxes">
+
+
+                <div class="about-box">
+
+                    <h3>🌍 100+</h3>
+                    <p>Destinations</p>
+
+                </div>
+
+
+                <div class="about-box">
+
+                    <h3>✈️ 5000+</h3>
+                    <p>Travelers</p>
+
+                </div>
+
+
+                <div class="about-box">
+
+                    <h3>⭐ 4.9</h3>
+                    <p>Rating</p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- Packages Section -->
+
+<section class="packages" id="packages">
+
+    <h2>Popular Travel Packages</h2>
+
+
+    <div class="package-container">
+
+
+        <div class="package-card">
+
+            <h3>Basic Trip</h3>
+
+            <h2>₹9,999</h2>
+
+            <p>✔ 3 Days Trip</p>
+            <p>✔ Hotel Stay</p>
+            <p>✔ City Tour</p>
+
+            <button class="package-btn">
+                Book Now
+            </button>
+
+        </div>
+
+
+
+        <div class="package-card popular">
+
+            <h3>Premium Trip ⭐</h3>
+
+            <h2>₹19,999</h2>
+
+            <p>✔ 7 Days Trip</p>
+            <p>✔ 4 Star Hotel</p>
+            <p>✔ Guide Support</p>
+
+            <button class="package-btn">
+                Book Now
+            </button>
+
+        </div>
+
+
+
+        <div class="package-card">
+
+            <h3>Luxury Trip</h3>
+
+            <h2>₹39,999</h2>
+
+            <p>✔ 10 Days Trip</p>
+            <p>✔ Luxury Hotel</p>
+            <p>✔ Personal Guide</p>
+
+            <button class="package-btn">
+                Book Now
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+
+    <h2>What Our Travelers Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card" data-aos="fade-up">
+            <img src="images/user1.jpg" alt="User">
+
+            <h3>Priya Sharma</h3>
+
+            <p>
+                JourneyMate made my trip planning effortless.
+                Everything was smooth and well organized.
+            </p>
+
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up">
+            <img src="images/user2.jpg" alt="User">
+
+            <h3>Rahul Verma</h3>
+
+            <p>
+                Amazing experience! The destination suggestions
+                were perfect for my family vacation.
+            </p>
+
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up">
+            <img src="images/user3.jpg" alt="User">
+
+            <h3>Anjali Singh</h3>
+
+            <p>
+                Best travel website I have ever used.
+                Highly recommended!
+            </p>
+
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Booking Modal -->
+
+<div class="modal" id="bookingModal">
+
+    <div class="modal-content">
+
+        <span class="close" id="closeModal">&times;</span>
+
+        <h2>Plan Your Trip ✈️</h2>
+
+
+        <form>
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Email Address" required>
+
+            <input type="text" placeholder="Destination" required>
+
+            <input type="date" required>
+
+
+            <select>
+                <option>1 Traveler</option>
+                <option>2 Travelers</option>
+                <option>3 Travelers</option>
+                <option>4+ Travelers</option>
+            </select>
+
+
+            <button type="submit">
+                Book Now
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- Contact Section -->
+
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <div class="contact-container">
+
+
+        <div class="contact-info">
+
+            <h3>Let's Plan Your Next Trip ✈️</h3>
+
+            <p>
+                Have questions? Our travel experts are here to help you.
+            </p>
+
+
+            <div>
+                📍 Lucknow, India
+            </div>
+
+            <div>
+                📞 +91 98765 43210
+            </div>
+
+            <div>
+                ✉️ support@journeymate.com
+            </div>
+
+        </div>
+
+
+
+        <form class="contact-form">
+
+            <input type="text" placeholder="Your Name">
+
+
+            <input type="email" placeholder="Your Email">
+
+
+            <textarea placeholder="Your Message"></textarea>
+
+
+            <button>
+                Send Message
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+
+    <h2>JourneyMate</h2>
+
+    <p>
+        Explore the world, create memories.
+    </p>
+
+
+    <div class="social">
+
+        <i class="fa-brands fa-instagram"></i>
+
+        <i class="fa-brands fa-facebook"></i>
+
+        <i class="fa-brands fa-twitter"></i>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026 JourneyMate. All Rights Reserved.
+    </p>
+
+
+</footer>
+
+
+
+<!-- Back To Top Button -->
+
+<button id="backToTop">
+    ↑
+</button>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration:1000,
+        once:true
+    });
+</script>
+
+<script src="js/script.js"></script>
+
+<!-- Destination Modal -->
+
+<div class="destination-modal" id="destinationModal">
+
+    <div class="destination-modal-content">
+
+        <span class="close-destination">&times;</span>
+
+        <img id="modalImage" src="" alt="">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalCountry"></p>
+
+        <h3 id="modalPrice"></h3>
+
+        <p id="modalDuration"></p>
+
+        <ul id="modalIncludes"></ul>
+
+        <button class="book-btn">
+            Book Now
+        </button>
+
+    </div>
+
+</div>
+<!-- Destination Popup -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-content">
+
+        <span class="close-btn">&times;</span>
+
+        <img id="popup-img" src="" alt="">
+
+        <h2 id="popup-name"></h2>
+
+        <p id="popup-country"></p>
+
+        <h3 id="popup-price"></h3>
+
+        <p id="popup-duration"></p>
+
+        <p id="popup-includes"></p>
+
+        <button class="book-btn">Book Now</button>
+
+    </div>
+
+</div>
+</body>
+</html>
