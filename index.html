@@ -65,12 +65,25 @@
            </p>
           
             <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search your destination...">
 
-            <button id="searchBtn">
-                    Search
-            </button>
-           </div>
+    <div class="search-input">
+        <i class="fa-solid fa-location-dot"></i>
+
+        <input 
+        type="text" 
+        id="searchInput"
+        placeholder="Where do you want to go?">
+    </div>
+
+
+    <button id="searchBtn">
+        Search
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+</div>
+
+
 
             <div class="hero-buttons">
                 <a href="#" class="primary-btn">Get Started</a>
@@ -93,6 +106,9 @@
             data-price="₹49,999"
             data-duration="5 Days / 4 Nights"
             data-image="images/paris.jpg"
+            data-rating="4.8 ⭐"
+data-besttime="April - June"
+data-attractions="Eiffel Tower, Louvre Museum, Champs-Élysées"
             data-includes="Flight,Hotel,Breakfast,City Tour">
             <div class="card-badge">Best Seller</div>
 
@@ -100,12 +116,12 @@
             <i class="fa-regular fa-heart"></i>
             </div>
             <img src="images/paris.jpg" alt="Paris">
-
             <div class="card-content">
                 <h3>Paris</h3>
                 <p>France</p>
                 <span>⭐ 4.8</span>
             </div>
+
 
         </div>
 
@@ -116,11 +132,14 @@
             data-price="₹39,999"
             data-duration="6 Days / 5 Nights"
             data-image="images/bali.jpg"
+            data-rating="4.8 ⭐"
+            data-besttime="November - February"
+            data-attractions="Baga Beach, Fort Aguada, Dudhsagar Falls"
             data-includes="Resort,Breakfast,Beach Tour">
             <div class="card-badge">Best Seller</div>
 
-<div class="wishlist">
-    <i class="fa-regular fa-heart"></i>
+            <div class="wishlist">
+            <i class="fa-regular fa-heart"></i>
 </div>
             <img src="images/bali.jpg" alt="Bali">
 
@@ -139,6 +158,9 @@
             data-price="₹79,999"
             data-duration="7 Days / 6 Nights"
             data-image="images/switzerland.jpg"
+            data-rating="4.9 ⭐"
+data-besttime="June - September"
+data-attractions="Swiss Alps, Zurich, Interlaken"
             data-includes="Flight,Hotel,Sightseeing,Ski Pass">
 <div class="card-badge">Best Seller</div>
 
@@ -162,6 +184,9 @@
             data-price="₹39,999"
             data-duration="6 Days / 5 Nights"
             data-image="images/thailand.jpg"
+            data-rating="4.7 ⭐"
+data-besttime="November - February"
+data-attractions="Phuket, Bangkok, Phi Phi Islands"
             data-includes="Flight,Hotel,Breakfast,City Tour">
 <div class="card-badge">Best Seller</div>
 
@@ -185,6 +210,9 @@
             data-price="₹59,999"
             data-duration="5 Days / 4 Nights"
             data-image="images/dubai.jpg"
+            data-rating="4.8 ⭐"
+data-besttime="November - March"
+data-attractions="Burj Khalifa, Dubai Mall, Palm Jumeirah"
             data-includes="Hotel,Desert Safari,Breakfast">
 <div class="card-badge">Best Seller</div>
 
@@ -208,6 +236,9 @@
             data-price="₹89,999"
             data-duration="8 Days / 7 Nights"
             data-image="images/tokyo.jpg"
+            data-rating="4.9 ⭐"
+data-besttime="March - May"
+data-attractions="Tokyo Tower, Shibuya Crossing, Mount Fuji"
             data-includes="Flight,Hotel,Sightseeing,Adventure Activities">
 <div class="card-badge">Best Seller</div>
 
@@ -260,66 +291,46 @@
         </div>
 
     </div>
+    <!-- Journey Stats -->
 
-</section>
+<div class="journey-stats" data-aos="fade-up">
 
-<!-- Counter Section -->
+    <div class="stats-card">
 
-<section class="counter-section">
+        <i class="fa-solid fa-earth-americas"></i>
 
-    <div class="counter-container">
+        <h2>100+</h2>
 
-
-        <div class="counter-box">
-
-            <h2 class="counter" data-target="100">
-                0
-            </h2>
-
-            <p>Destinations</p>
-
-        </div>
-
-
-
-        <div class="counter-box">
-
-            <h2 class="counter" data-target="5000">
-                0
-            </h2>
-
-            <p>Happy Travelers</p>
-
-        </div>
-
-
-
-        <div class="counter-box">
-
-            <h2 class="counter" data-target="50">
-                0
-            </h2>
-
-            <p>Countries</p>
-
-        </div>
-
-
-
-        <div class="counter-box">
-
-            <h2 class="counter" data-target="99">
-                0
-            </h2>
-
-            <p>Success Rate %</p>
-
-        </div>
-
+        <p>Destinations</p>
 
     </div>
 
+
+    <div class="stats-card">
+
+        <i class="fa-solid fa-plane"></i>
+
+        <h2>500+</h2>
+
+        <p>Trips Completed</p>
+
+    </div>
+
+
+    <div class="stats-card">
+
+        <i class="fa-solid fa-star"></i>
+
+        <h2>4.9</h2>
+
+        <p>Customer Rating</p>
+
+    </div>
+
+</div>
+
 </section>
+
 
 <!-- Packages Section -->
 <section class="packages" id="packages">
@@ -518,6 +529,108 @@
 
 </section>
 
+<!-- Trip Planner -->
+
+<section class="trip-planner" id="planner">
+
+    <div class="section-title">
+        <h2>Plan Your Perfect Trip</h2>
+        <p>Create your personalized travel itinerary</p>
+    </div>
+
+
+    <div class="planner-container">
+
+        <div class="planner-form">
+
+            <input 
+            type="text" 
+            id="destination"
+            placeholder="Enter Destination">
+
+
+            <input 
+            type="number" 
+            id="days"
+            placeholder="Number of Days">
+
+
+            <input 
+            type="number" 
+            id="budget"
+            placeholder="Your Budget">
+
+
+            <select id="travelType">
+
+                <option value="">
+                    Select Travel Type
+                </option>
+
+                <option value="Adventure">
+                    Adventure
+                </option>
+
+                <option value="Family">
+                    Family
+                </option>
+
+                <option value="Luxury">
+                    Luxury
+                </option>
+
+                <option value="Couple">
+                    Couple
+                </option>
+
+            </select>
+
+
+            <button id="generatePlan">
+                Generate Plan ✈️
+            </button>
+
+        </div>
+
+
+        <div class="plan-result" id="planResult">
+
+            <h3>Your Trip Plan Will Appear Here</h3>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- AI Assistant -->
+
+<section class="ai-assistant" id="ai">
+
+    <div class="section-title">
+        <h2>🤖 AI Travel Assistant</h2>
+        <p>Get personalized travel suggestions powered by AI.</p>
+    </div>
+
+    <div class="ai-box">
+
+        <textarea
+            id="userPrompt"
+            placeholder="Example: Suggest a 5-day trip under ₹40,000 for a couple."
+        ></textarea>
+
+        <button id="askAI">Ask AI ✨</button>
+
+        <div id="aiResponse">
+            Your AI travel recommendation will appear here...
+        </div>
+
+    </div>
+
+</section>
+
 <!-- Testimonials Section -->
 <section class="testimonials">
 
@@ -526,7 +639,7 @@
     <div class="testimonial-container">
 
         <div class="testimonial-card" data-aos="fade-up">
-            <img src="images/user1.jpg" alt="User">
+            <img src="images/travel copy.jpg" alt="User">
 
             <h3>Priya Sharma</h3>
 
@@ -539,7 +652,7 @@
         </div>
 
         <div class="testimonial-card" data-aos="fade-up">
-            <img src="images/user2.jpg" alt="User">
+            <img src="images/travel copy.jpg" alt="User">
 
             <h3>Rahul Verma</h3>
 
@@ -552,7 +665,7 @@
         </div>
 
         <div class="testimonial-card" data-aos="fade-up">
-            <img src="images/user3.jpg" alt="User">
+            <img src="images/travel copy.jpg" alt="User">
 
             <h3>Anjali Singh</h3>
 
@@ -570,43 +683,96 @@
 
 <!-- Booking Modal -->
 
-<div class="modal" id="bookingModal">
+<div class="booking-modal" id="bookingModal">
 
-    <div class="modal-content">
+    <div class="booking-box">
 
-        <span class="close" id="closeModal">&times;</span>
-
-        <h2>Plan Your Trip ✈️</h2>
-
-
-        <form>
-
-            <input type="text" placeholder="Your Name" required>
-
-            <input type="email" placeholder="Email Address" required>
-
-            <input type="text" placeholder="Destination" required>
-
-            <input type="date" required>
+        <span class="close-btn" id="closeModal">
+            &times;
+        </span>
 
 
-            <select>
-                <option>1 Traveler</option>
-                <option>2 Travelers</option>
-                <option>3 Travelers</option>
-                <option>4+ Travelers</option>
+        <h2>Book Your Trip ✈️</h2>
+
+
+        <form id="bookingForm">
+
+            <input 
+            type="text" 
+            placeholder="Your Name"
+            required>
+
+
+            <input 
+            type="email" 
+            placeholder="Email Address"
+            required>
+
+
+            <input 
+            type="tel" 
+            placeholder="Phone Number"
+            required>
+
+
+            <input 
+            type="date"
+            required>
+
+
+            <select required>
+
+                <option value="">
+                    Select Package
+                </option>
+
+                <option>
+                    Goa Beach Escape
+                </option>
+
+                <option>
+                    Manali Adventure
+                </option>
+
+                <option>
+                    Dubai Luxury Trip
+                </option>
+
             </select>
 
 
             <button type="submit">
-                Book Now
+                Confirm Booking
             </button>
 
+
         </form>
+
 
     </div>
 
 </div>
+<!-- Travel CTA -->
+
+<section class="travel-cta" data-aos="fade-up">
+
+    <div class="cta-content">
+
+        <h2>Ready to Explore the World?</h2>
+
+        <p>
+            Plan your next unforgettable journey with JourneyMate
+        </p>
+
+    </div>
+
+
+    <a href="#packages">
+        <button>Start Planning ✈️</button>
+    </a>
+
+</section>
+
 
 <!-- Contact Section -->
 
@@ -664,6 +830,31 @@
     </div>
 
 </section>
+<div class="booking-modal" id="bookingModal">
+
+    <div class="booking-box">
+
+        <span class="close-btn" id="closeModal">
+            &times;
+        </span>
+
+        <h2>Book Your Trip ✈️</h2>
+
+        <form id="bookingForm">
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Email">
+
+            <button type="submit">
+                Confirm Booking
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
 
 <!-- Footer -->
 
@@ -679,9 +870,7 @@
     <div class="social">
 
         <i class="fa-brands fa-instagram"></i>
-
         <i class="fa-brands fa-facebook"></i>
-
         <i class="fa-brands fa-twitter"></i>
 
     </div>
@@ -691,9 +880,7 @@
         © 2026 JourneyMate. All Rights Reserved.
     </p>
 
-
 </footer>
-
 
 
 <!-- Back To Top Button -->
@@ -702,27 +889,18 @@
     ↑
 </button>
 
-    <script src="js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script>
-    AOS.init({
-        duration:1000,
-        once:true
-    });
-</script>
 
-<script src="js/script.js"></script>
+<!-- ================= Destination Modal ================= -->
 
-<!-- Destination Modal -->
-
-<div class="destination-modal" id="destinationModal">
+<div id="destinationModal" class="destination-modal">
 
     <div class="destination-modal-content">
 
         <span class="close-destination">&times;</span>
 
-        <img id="modalImage" src="" alt="">
+        <img id="modalImage" src="" alt="Destination">
 
         <h2 id="modalTitle"></h2>
 
@@ -734,37 +912,63 @@
 
         <ul id="modalIncludes"></ul>
 
-        <button class="book-btn">
+        <p id="modalRating"></p>
+
+<p id="modalBestTime"></p>
+
+<p id="modalAttractions"></p>
+
+        <button id="popupBookBtn" class="book-btn">
             Book Now
         </button>
 
     </div>
 
 </div>
-<!-- Destination Popup -->
 
-<div class="popup" id="popup">
+<!-- ================= Booking Popup ================= -->
 
-    <div class="popup-content">
+<div id="bookingPopup" class="booking-popup">
 
-        <span class="close-btn">&times;</span>
+    <div class="booking-content">
 
-        <img id="popup-img" src="" alt="">
+        <span class="close-booking">&times;</span>
 
-        <h2 id="popup-name"></h2>
+        <h2>Book Your Trip</h2>
 
-        <p id="popup-country"></p>
+        <form id="bookingForm">
 
-        <h3 id="popup-price"></h3>
+            <input type="text" placeholder="Full Name" required>
 
-        <p id="popup-duration"></p>
+            <input type="email" placeholder="Email Address" required>
 
-        <p id="popup-includes"></p>
+            <input type="tel" placeholder="Phone Number" required>
 
-        <button class="book-btn">Book Now</button>
+            <input type="date" required>
+
+            <input type="number" placeholder="No. of Travelers" required>
+
+            <textarea placeholder="Special Request"></textarea>
+
+            <button type="submit">
+                Confirm Booking
+            </button>
+
+        </form>
 
     </div>
 
 </div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="js/script.js"></script>
+<script>
+AOS.init({
+    duration:1000,
+    once:true
+});
+</script>
+
 </body>
 </html>

@@ -1,3 +1,4 @@
+console.log("JS Loaded");
 // ================= Navbar Scroll Effect =================
 
 const navbar = document.querySelector(".navbar");
@@ -280,83 +281,274 @@ window.addEventListener("load", () => {
 
 });
 
-// Destination Popup
+// ================= Wishlist =================
+
+const hearts = document.querySelectorAll(".wishlist i");
+
+hearts.forEach((heart) => {
+
+    heart.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+        heart.classList.toggle("fa-regular");
+        heart.classList.toggle("fa-solid");
+
+        if (heart.classList.contains("fa-solid")) {
+            heart.style.color = "red";
+        } else {
+            heart.style.color = "#999";
+        }
+
+    });
+
+});
+
+// ================= Booking Popup =================
+const bookingPopup = document.getElementById("bookingPopup");
+const popupBookBtn = document.getElementById("popupBookBtn");
+const closeBooking = document.querySelector(".close-booking");
+
+popupBookBtn.addEventListener("click", () => {
+
+    destinationModal.style.display = "none";
+    bookingPopup.classList.add("show");
+
+});
+
+closeBooking.addEventListener("click", () => {
+
+    bookingPopup.classList.remove("show");
+
+});
+
+bookingPopup.addEventListener("click", (e) => {
+
+    if (e.target === bookingPopup) {
+
+        bookingPopup.classList.remove("show");
+
+    }
+
+});
+
+// ================= Destination Popup =================
 
 const destinationCards = document.querySelectorAll(".card");
 
 const destinationModal = document.getElementById("destinationModal");
 
 const modalImage = document.getElementById("modalImage");
-
 const modalTitle = document.getElementById("modalTitle");
-
 const modalCountry = document.getElementById("modalCountry");
-
 const modalPrice = document.getElementById("modalPrice");
-
 const modalDuration = document.getElementById("modalDuration");
-
 const modalIncludes = document.getElementById("modalIncludes");
+const modalRating = document.getElementById("modalRating");
+const modalBestTime = document.getElementById("modalBestTime");
 
+const modalAttractions = document.getElementById("modalAttractions");
 const closeDestination = document.querySelector(".close-destination");
 
-destinationCards.forEach(card=>{
+destinationCards.forEach((card) => {
 
-card.addEventListener("click",()=>{
+    card.addEventListener("click", () => {
 
-modalImage.src=card.dataset.image;
+        modalImage.src = card.dataset.image;
+        modalTitle.textContent = card.dataset.name;
+        modalCountry.textContent = card.dataset.country;
+        modalPrice.textContent = card.dataset.price;
+        modalDuration.textContent = card.dataset.duration;
+modalRating.textContent = "⭐ Rating: " + card.dataset.rating;
 
-modalTitle.innerText=card.dataset.name;
+modalBestTime.textContent = 
+"🗓️ Best Time: " + card.dataset.besttime;
 
-modalCountry.innerText=card.dataset.country;
+modalAttractions.textContent =
+"📍 Attractions: " + card.dataset.attractions;
+        modalIncludes.innerHTML = "";
 
-modalPrice.innerText=card.dataset.price;
+        const includes = card.dataset.includes.split(",");
 
-modalDuration.innerText=card.dataset.duration;
+        includes.forEach((item) => {
 
-modalIncludes.innerHTML="";
+            modalIncludes.innerHTML += `<li>✔ ${item}</li>`;
 
-card.dataset.includes.split(",").forEach(item=>{
+        });
 
-modalIncludes.innerHTML+=`<li>✔ ${item}</li>`;
+        destinationModal.style.display = "flex";
+
+    });
 
 });
 
-destinationModal.style.display="flex";
+if (closeDestination) {
 
-});
+    closeDestination.addEventListener("click", () => {
 
-});
+        destinationModal.style.display = "none";
 
-closeDestination.onclick=()=>{
-
-destinationModal.style.display="none";
-
-};
-
-window.onclick=(e)=>{
-
-if(e.target===destinationModal){
-
-destinationModal.style.display="none";
+    });
 
 }
 
-};
+window.addEventListener("click", (e) => {
 
-const hearts = document.querySelectorAll(".wishlist");
+    if (e.target === destinationModal) {
 
-hearts.forEach((heart)=>{
+        destinationModal.style.display = "none";
 
-    heart.addEventListener("click",()=>{
+    }
 
-        const icon = heart.querySelector("i");
+});
 
-        icon.classList.toggle("fa-regular");
-        icon.classList.toggle("fa-solid");
+const bookButtons = document.querySelectorAll(".book-btn");
+const bookingModal = document.getElementById("bookingModal");
+
+
+
+bookButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        bookingModal.style.display = "flex";
 
     });
 
 });
 
 
+closeModal.addEventListener("click", () => {
+
+    bookingModal.style.display = "none";
+
+});
+
+
+window.addEventListener("click", (e)=>{
+
+    if(e.target === bookingModal){
+
+        bookingModal.style.display = "none";
+
+    }
+
+});
+
+
+document.getElementById("bookingForm")
+.addEventListener("submit",(e)=>{
+
+    e.preventDefault();
+
+    alert("🎉 Booking request submitted successfully!");
+
+    bookingModal.style.display="none";
+
+});
+
+// ================= Trip Plan Generator =================
+const generateBtn = document.getElementById("generatePlan");
+
+
+generateBtn.addEventListener("click",()=>{
+
+
+    let destination =
+    document.getElementById("destination").value;
+
+
+    let days =
+    document.getElementById("days").value;
+
+
+    let budget =
+    document.getElementById("budget").value;
+
+
+    let type =
+    document.getElementById("travelType").value;
+
+    console.log(type);
+    let itinerary = "";
+
+if(type === "Adventure"){
+
+    itinerary = `
+    <h4>Adventure Itinerary 🏔️</h4>
+
+    <p>Day 1: Explore famous places & local sightseeing</p>
+
+    <p>Day 2: Adventure activities and nature spots</p>
+
+    <p>Day 3: Trekking, photography and local experience</p>
+    `;
+
+}
+
+else if(type === "Couple"){
+
+    itinerary = `
+    <h4>Couple Itinerary ❤️</h4>
+
+    <p>Day 1: Romantic places and sightseeing</p>
+
+    <p>Day 2: Sunset points & special experiences</p>
+
+    <p>Day 3: Cafe hopping and relaxing moments</p>
+    `;
+
+}
+
+else if(type === "Luxury"){
+
+    itinerary = `
+    <h4>Luxury Itinerary ✨</h4>
+
+    <p>Day 1: Premium hotel check-in and city tour</p>
+
+    <p>Day 2: Luxury experiences and famous attractions</p>
+
+    <p>Day 3: Fine dining and shopping</p>
+    `;
+
+}
+
+else{
+
+    itinerary = `
+    <h4>Family Itinerary 👨‍👩‍👧</h4>
+
+    <p>Day 1: Family sightseeing</p>
+
+    <p>Day 2: Fun activities and attractions</p>
+
+    <p>Day 3: Shopping and local exploration</p>
+    `;
+
+}
+
+
+
+    document.getElementById("planResult").innerHTML = `
+
+    <h3>Your ${destination} Trip Plan ✈️</h3>
+
+    <p><b>Duration:</b> ${days} Days</p>
+
+    <p><b>Budget:</b> ₹${budget}</p>
+
+    <p><b>Travel Type:</b> ${type}</p>
+
+
+    <hr>
+
+
+    ${itinerary}
+
+    
+
+    `;
+
+
+});
